@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	 <link rel="stylesheet"  href="style.css">
+	<title>Image Captioning</title>
+   
+</head>
+<body>
+		<div>
+		<form method="POST" action="/" enctype="multipart/form-data"> 
+		
+			<input class="form-control" type="file" name="userfile" placeholder="Your image">
+			<input type="submit" type="submit">
+		</form>
+ 
+		{% if your_result %}
+			<img src="{{your_result['image']}}">
+            <h1  class = "Captiongenerator"> Generated Caption :  <i> {{ your_result['caption']}} </i>  </h1>
+ 		{% endif %}
+		 <div>
+</body>
+</html>
